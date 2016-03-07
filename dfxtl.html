@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css"></link>
+    <link rel="stylesheet" href="css/common.css"></link>
+    <link rel="stylesheet" href="css/project.css"></link>
+    <link rel="stylesheet" href="css/specific.css"></link>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <script type="text/javascript">
+        var config={
+            activityid:3
+        };
+    </script>
+</head>
+
+<body>
+    <section class="container fluid">
+        <div class="wrapper">
+            <img class="background" src="img/background.jpg" alt="background">
+            <div class="machine">
+                <img class="machine-background" src="img/tigger.png" alt="machine">   
+                <div class="title">
+                    <span></span>
+                </div>
+                <div class="number">
+                    <div class="first flip delay200ms n0"></div>
+                    <div class="second flip delay400ms n0"></div>
+                    <div class="third flip delay600ms n0"></div>
+                </div>
+                <div class="button"></div>
+            </div>
+        </div>
+    </section>
+    <script src="js/jquery1.12.1.min.js"></script>
+    <script src="js/underscore.js"></script>
+    <script src="js/fn.js"></script>
+    <script src="js/lottery.js"></script>
+    <script src="js/http.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
