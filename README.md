@@ -1,4 +1,4 @@
-fis-emao
+fis3
 =========
 
 基于FIS的纯前端解决方案
@@ -14,8 +14,8 @@ fis-emao
 ###使用方法：
     - 安装nodejs (http://nodejs.org/)
 
-    - 安装fis-emao
-            npm install -g fis-emao
+    - 安装fis3
+            npm install -g fis3
             emao -v
 
     - 开启server
