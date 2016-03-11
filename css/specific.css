@@ -1,113 +1,143 @@
-.wrapper{position: relative;}
-
-
-
-.background{width: 100%;height: auto;}
-.machine{position: absolute;top: 11%;width: 100%;text-align: center;}
-.machine-background{width: 47%;height: auto;}
-.title{display: table; position: absolute;top: 6.06%;width: 47%;left:25%;font-size: 1.2rem;margin-left:-1%;color:#fff;}
-.title span{display: table-cell;}
-.number{position: absolute;top: 24%;height: 39%;left: 29%;width: 37%;}
-.number div{display: inline-block;width: 33%;height: 100%;float: left;background-image: url(../img/number.png);background-repeat: no-repeat;background-size: cover;background-position: 99% 1%;    margin-left: -1%;}
-.number .n1{background-position: 0 1%;}
-.number .n2{background-position: 11% 1%;}
-.number .n3{background-position: 22% 1%;}
-.number .n4{background-position: 33% 1%;}
-.number .n5{background-position: 44% 1%;}
-.number .n6{background-position: 55% 1%;}
-.number .n7{background-position: 66% 1%;}
-.number .n8{background-position: 77% 1%;}
-.number .n9{background-position: 88% 1%;}
-.number .n0{background-position: 99% 1%;}
-
-.button{width: 37%;height: 23%;position:absolute;left:29%;top:69%;background-image: url(../img/btn2.png);background-size: cover;}
-.disabled{background-image: url(../img/btn2.png);}
-.enabled{background-image: url(../img/btn.png);}
-
-@-webkit-keyframes flip {
-  from {
-    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -90deg);
-    transform: perspective(400px) rotate3d(0, 1, 0, -90deg);
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
-  }
-
-  40% {
-    -webkit-transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -30deg);
-    transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -30deg);
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
-  }
-
-  50% {
-    -webkit-transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, 0deg);
-    transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, 0deg);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-  }
-
-  80% {
-    -webkit-transform: perspective(400px) scale3d(.90, .90, .90);
-    transform: perspective(400px) scale3d(.90, .90, .90);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-  }
-
-  to {
-    -webkit-transform: perspective(400px);
-    transform: perspective(400px);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-  }
+.wrapper {
+    position: relative;
 }
 
-@keyframes flip {
-  from {
-    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -90deg);
-    transform: perspective(400px) rotate3d(0, 1, 0, -90deg);
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
-  }
-
-  40% {
-    -webkit-transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -30deg);
-    transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -30deg);
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
-  }
-
-  50% {
-    -webkit-transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, 0deg);
-    transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, 0deg);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-  }
-
-  80% {
-    -webkit-transform: perspective(400px) scale3d(.90, .90, .90);
-    transform: perspective(400px) scale3d(.90, .90, .90);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-  }
-
-  to {
-    -webkit-transform: perspective(400px);
-    transform: perspective(400px);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-  }
+.background {
+    width: 100%;
+    height: auto;
 }
 
-.animated.flip {
-  -webkit-backface-visibility: visible;
-  backface-visibility: visible;
-  -webkit-animation-name: flip;
-  animation-name: flip;
+.machine {
+    height: 100%;
+    text-align: center;
 }
 
-.animated {
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
+.machine-background {
+    height: 81vmin;
+}
+
+.machine-background-fixed {
+    width: 93vmin;
+    height: 81vmin;
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 0 calc(100vw / 2 - 93vmin / 2);
+}
+
+.title {
+    display: table;
+    position: absolute;
+    top: 6.06%;
+    width: 76%;
+    left: 8%;
+    font-size: 6vmin;
+    margin-left: -1%;
+    color: #fff;
+}
+
+.title span {
+    display: table-cell;
+}
+
+.number {
+    position: absolute;
+    top: 25%;
+    height: 40%;
+    left: 10%;
+    width: 72%;
+}
+
+.number div {
+    display: inline-block;
+    width: 40%;
+    height: 100%;
+    float: left;
+    background-image: url(/img/number.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 99.6% 102%;
+    margin-left: -7%;
+}
+
+.number .n1 {
+    background-position: 0.6% 1%;
+}
+
+.number .n2 {
+    background-position: 11.6% 1%;
+}
+
+.number .n3 {
+    background-position: 22.6% 1%;
+}
+
+.number .n4 {
+    background-position: 33.6% 1%;
+}
+
+.number .n5 {
+    background-position: 44.6% 1%;
+}
+
+.number .n6 {
+    background-position: 55.6% 1%;
+}
+
+.number .n7 {
+    background-position: 66.6% 1%;
+}
+
+.number .n8 {
+    background-position: 77.6% 1%;
+}
+
+.number .n9 {
+    background-position: 88.6% 1%;
+}
+
+.number .n0 {
+    background-position: 99.6% 1%;
+}
+
+.button {
+    width: 84%;
+    height: 22%;
+    position: absolute;
+    left: 3%;
+    top: 69%;
+    background-image: url(/img/btn2.png);
+    background-size: cover;
+}
+
+.disabled {
+    background-image: url(../img/btn2.png);
+}
+
+.enabled {
+    background-image: url(../img/btn.png);
+}
+
+
+.logo-left{
+    background-image: url(/img/logo-left.png);
+    position: absolute;
+    top: 0;
+    left: -31vmin;
+    width: 24vmin;
+    height: 16vmin;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+.logo-right{
+    background-image: url(/img/logo-right.png);
+    position: absolute;
+    top: 0;
+    right: -31vmin;
+    width: 17vmin;
+    height: 15vmin;
+    background-size: contain;
+    background-repeat: no-repeat;
 }

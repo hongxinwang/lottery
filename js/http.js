@@ -14,7 +14,7 @@ var http={
 	},
 	getUrl:function(){
 		return http.ajax({
-			url:http.url.get+config.activityid,
+			url:http.url.get+config.activetyid,
 			type:'get',
 			data:{
 				_method:'get'
@@ -25,9 +25,11 @@ var http={
 		return http.ajax({
 			type:'post',
 			url:http.url.post+config.roundid,
-			_method:'put',
-			action:'off',
-			activityid:config.activityid
+			data:{
+				_method:'put',
+				action:'off',
+				activetyid:config.activetyid
+			}
 		})
 	}
 };

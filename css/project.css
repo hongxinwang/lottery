@@ -2,7 +2,7 @@ body,html{width: 100%; height:100%;}
 body,html{overflow: hidden;}
 html{font-size: 2vw;}
 *{margin: 0;padding: 0;}
-.container{min-width: 600px;background-color: #fb9c47;}
+.container{background-position: center;background-color: #fb9c47;background-image: url(../img/bk.png);background-size: cover;background-repeat: no-repeat;}
 .y-center{padding-top: 10px;padding-bottom: 10px;}
 .f-hide{display: none;}
 .delay200ms{-webkit-animation-delay: 200ms;animation-delay: 200ms;}

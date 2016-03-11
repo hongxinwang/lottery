@@ -36,13 +36,16 @@ var app = {
     beginEffect:function(){
         $('.number div').addClass('animated');
     },
+    removeEffect:function(){
+        $('.number div').removeClass('animated');
+    },
     getUrl: function() {
         http.getUrl().
         done(_y.bind(this.done, this)).
         done(_y.bind(this.getProgress,this)).
         done(_y.bind(this.initProgress,this)).
         done(_y.bind(this.setLogo,this)).
-        done(_y.bind(this.beginEffect,this)).
+        // done(_y.bind(this.beginEffect,this)).
         fail(_y.bind(this.fail, this));
     },
     postUrl:function(){
@@ -75,7 +78,7 @@ var app = {
     },
     success:function(source){
     	this._numbers=this.getRealNumbers(source.data.number);
-        this._activityid=config.activityid;
+        this._activityid=config.activetyid;
         this._roundid=source.data.roundid;
         this._logo=source.data.logo;
         config.roundid=source.data.roundid;
@@ -94,7 +97,6 @@ var app = {
         if (this._animated) return;
         this._animated = true;
         clearInterval(this._timer);
-        console.log((that._index>=that._numbers.length-1)||that._index==-1,that._index)
         if(that._index>=that._numbers.length||that._index==-1){
             that.postUrl();
             that.setProgress();
@@ -117,11 +119,15 @@ var app = {
 
             clearInterval(that._timer);
             $('.machine .number').addClass('f-hide');
+            that.beginEffect();
             setTimeout(function() {
                 setTimeout(function() {
                     that._animated = false;
                 }, 1000);
                 $('.machine .number').removeClass('f-hide');
+                setTimeout(function(){
+                    that.removeEffect();
+                },2000);
             }, 30);
         }, 30);
         return 'game over!'
